@@ -1,0 +1,34 @@
+-----> impor data csv ke dalam DBMS Postgre SQL
+
+1. siapkan data yang akan diimpor dalam format csv
+   jika ingin insert data ke table yang sudah exist, pastikan komponen tabel yang akan diimpor match dengan tabel yang sudah dibuat di postgre sql
+2. Step
+   klik kanan tables --> import data --> terbuka window, klik next --> pilih file yang akan diimpor --> next
+   pada jendela data transfer isikan nama table pada bagian target--> next -->proceed
+
+
+----->> membuat tabel pada database
+ create table if not exist nama_table
+     column 1 type data column constraint,
+     column 2 type data column constrait,
+     column 3 type data column constraint
+     
+ create table if not exists batch_11.homework_2_kelompok_7
+
+(id int primary key not null,
+ nama_depan varchar(255) not null,
+ nama_belakang varchar(255) not null,
+ alamat_email varchar(255) not null,
+ link_linkedIn varchar(255) not null,
+ pekerjaan_impian varchar(255) not null,
+ alasan_mengikuti_bootcamp varchar(255) not null
+)
+
+
+Memasukkan data ke dalam tabel homework_2_kelompok_7
+
+insert into batch_11.homework_2_kelompok_7 values
+(1,'Diaz','Juabiry Prabowo','diazjubiary@gmail.com','https://www.linkedin.com/in/diazjubairy','Senior Data Scientist','Agar mendapatkan pekerjaan di bidang data'),
+(2,'Hadie','Putra','mulya.hadie@gmail.com','https://linkedin.com/in/hadie-putra-584768229/','Juragan Properti','Upgrade skill dalam pemrosesan data'),
+(3,'Farahul','Jannah','farah930922@gmail.com','https://www.linkedin.com/in/farahul-jannah-1bbb31150/','Istri yg solehah','Bisa remote working sebagai data scientist'),
+(4,'Desi','Sulistyowati','desisulist8@gmail.com','https://www.linkedin.com/in/desi-sulistyowati30','Pengusaha','Switch career jadi data scientist')
